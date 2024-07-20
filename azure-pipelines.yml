@@ -12,12 +12,12 @@ stages:
    - job: BuildJob
      steps:
      - checkout: self
-     - script: |
-        npm install
+       displayName: 'Checkout Code'
+
+     - script: cd src && npm install
        displayName: 'Installing Dependencies'
 
-     - script: |
-        npm run build
+     - script: cd src && npm run build
        displayName: 'Running Build'
 
      - task: PublishBuildArtifacts@1
