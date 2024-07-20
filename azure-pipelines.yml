@@ -11,10 +11,12 @@ stages:
    jobs:
    - job: BuildJob
      steps:
-     - script: npm install
+     - script: |
+        npm install
        displayName: 'Installing Dependencies'
 
-     - script: npm run build
+     - script: |
+        npm run build
        displayName: 'Running Build'
 
      - task: PublishBuildArtifacts@1
