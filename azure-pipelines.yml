@@ -14,6 +14,14 @@ stages:
      - checkout: self
        displayName: 'Checkout Code'
 
+     - script: mkdir -p src
+       displayName: 'Create src Directory'
+
+     - script: ls -al
+       displayName: 'List Directory Contents'
+
+     - script: ls -al src
+       displayName: 'List Contents of src Directory'
      - script: cd src && npm install
        displayName: 'Installing Dependencies'
 
